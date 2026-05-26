@@ -1,17 +1,16 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.use(express.static('public') );
 
 app.get('/', (request, response) => {
-    const ejs = require('ejs');
-    const template = '<link rel="stylesheet" href="style.css"><h1><%= title %></h1><p><%= text %></p><a href="/valami">Valami</a>';
-    const model = {title: 'Kezdőlap', text: 'Ez pedig a főoldal tartalmi része'};
-    const html = ejs.render(template, model);
-    response.send(html);
+    const model = {title: 'Üdvözlünk!'};
+    response.render('home', model);
 });
 app.get('/valami', (request, response) => {
-    response.send('<link rel="stylesheet" href="style.css"><h1>Valami!</h1><a href="/">Kezdőlap</a>');
+    const model = {title: 'Valami'};
+    response.render('home', model);
 });
 
 app.listen(8888);
