@@ -1,0 +1,6 @@
+Első szolgáltatás;Lorem ipsum dolor sit amet consectetur adipiscing elit;10000
+Második szolgáltatás;Lorem ipsum dolor sit amet consectetur elit;20000
+Harmadik szolgáltatás;Lorem ipsum dolor sit amet consectetur;30000
+Negyedik szolgáltatás;Lorem ipsum dolor sit amet;40000
+Ötödik szolgáltatás;Lorem ipsum dolor;50000
+
