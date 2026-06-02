@@ -10,7 +10,11 @@ class PageController {
         const content = pageModel.getContactContent();
         const model = {title: 'Elérhetőségeink', content: pageModel.getContactContent()};
         response.render('pages/page', model);
-    }    
-}
+    }   
+    static notFoundPage(request, response) {
+        const model = {title: '404 - Nem található', content: 'A keresett oldal nem található!'};
+        response.render('pages/notfound', model);
+    }
+}    
 
 module.exports = PageController;
