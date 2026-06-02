@@ -1,0 +1,16 @@
+<%- include('../partials/header')  %>
+
+<% if (article) { %>
+    <article></article>
+        <h2><%= article.title %></h2>
+        <p><strong><%= article.intro %></strong></p>
+        <% for (let line of article.content) { %>
+            <p><%= line %></p>
+        <% } %>
+    </article>
+<% } else { %>        
+    <h2>Nem található.</h2>
+    <p>A kért cikk nem szerepel az adatbázisban.</p>
+<% } %>
+
+<%- include('../partials/footer') %>
